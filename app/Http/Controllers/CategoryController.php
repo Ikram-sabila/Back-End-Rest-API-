@@ -34,6 +34,9 @@ class CategoryController extends Controller
         $category->update([
             'nama'=>$request->nama
         ]);
+
+        return response()->json($category, 200);
+
     }
 
     public function destroy($id){

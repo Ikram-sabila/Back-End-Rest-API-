@@ -14,6 +14,9 @@ class ItemController extends Controller
 
     public function show($id) {
         $items = Item::find($id);
+        if (!$items) {
+            return response()->json(['message' => 'Item not found'], 404);
+        }
         return response()->json($items);
     }
 
@@ -39,6 +42,6 @@ class ItemController extends Controller
 
     public function destroy($id){
         Item::destroy($id);
-        return response()->json(null, 204);
+        return response()->json(null, status: 204);
     }   
 }
