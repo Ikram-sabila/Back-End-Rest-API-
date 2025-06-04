@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('jumlah');
             $table->decimal('harga', 10, 2);
+            $table->string('gambar_url')->nullable();
             $table->timestamps();
         });
     }
