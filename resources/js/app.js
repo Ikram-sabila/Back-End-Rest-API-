@@ -1,10 +1,8 @@
-import './bootstrap';
+import './bootstrap'
 import { createApp } from 'vue'
 import axios from 'axios'
-import ItemManager from './components/ItemManager.vue'
+import Biodata from './components/BiodataDetail.vue'
 
-axios.defaults.baseURL = 'http://localhost:8000/api' // tambahkan /api kalau route API ada di routes/api.php
+axios.defaults.baseURL = 'http://localhost:8000/api'
 
-const app = createApp({})
-app.component('item-manager', ItemManager)
-app.mount('#app')
+createApp(Biodata).mount('#app')

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Item Manager</title>
-    @vite(['resources/js/app.js'])
+    <title>Biodata</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    <div id="app">
-        <item-manager></item-manager>
-    </div>
-</body>
-</html>
 
+<body>
+    <div id="app"></div>
+</body>
+
+</html>

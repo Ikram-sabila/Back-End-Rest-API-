@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BiodataController;
 use App\Models\Item;
 use App\Models\Category;
 
@@ -23,3 +24,6 @@ Route::post('/categories', [CategoryController::class, 'store']);
 Route::put('/categories/{id}', [CategoryController::class, 'update']);
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
 
+Route::get('/biodata', [BiodataController::class, 'index']);
+Route::get('/biodata/{id}', [BiodataController::class, 'show']);
+Route::post('/biodata', [BiodataController::class, 'store']);
